@@ -5,18 +5,7 @@ ROS package providing:
 - RGB-D perception pipeline (Kinect → depth → 3D point cloud)
 - Real-time obstacle monitoring with simple STOP/OK advisories
 
-----
 
-## Topics & Services
-
-| Topic/Service            | Type                      | Description                    |
-|--------------------------|---------------------------|--------------------------------|
-| `/camera/depth/points`   | `sensor_msgs/PointCloud2` | Calibrated 3D point cloud      |
-| `/camera/depth/image_raw`| `sensor_msgs/Image`       | Depth image (16UC1)            |
-| `/camera/depth/camera_info`| `sensor_msgs/CameraInfo` | Kinect intrinsics              |
-| `/nav/advice`            | `std_msgs/String`         | "STOP/OK" advisories @ 5Hz     |
-| `/point_cloud`           | `sensor_msgs/PointCloud2` | Odometry trajectory            |
-| `/closest_obstacle`      | `std_srvs/Trigger`        | Nearest obstacle distance      |
 
 ## Installation
 
@@ -34,6 +23,18 @@ roslaunch rgbd_nav_pkg rgbd_nav_full.launch
 Monitor
 rostopic echo /nav/advice
 rosservice call /closest_obstacle "{}"
+
+## Topics & Services
+
+| Topic/Service            | Type                      | Description                    |
+|--------------------------|---------------------------|--------------------------------|
+| `/camera/depth/points`   | `sensor_msgs/PointCloud2` | Calibrated 3D point cloud      |
+| `/camera/depth/image_raw`| `sensor_msgs/Image`       | Depth image (16UC1)            |
+| `/camera/depth/camera_info`| `sensor_msgs/CameraInfo` | Kinect intrinsics              |
+| `/nav/advice`            | `std_msgs/String`         | "STOP/OK" advisories @ 5Hz     |
+| `/point_cloud`           | `sensor_msgs/PointCloud2` | Odometry trajectory            |
+| `/closest_obstacle`      | `std_srvs/Trigger`        | Nearest obstacle distance      |
+
 
 ## Launch Architecture
 
