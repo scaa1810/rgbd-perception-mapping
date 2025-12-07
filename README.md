@@ -42,6 +42,13 @@ Kinect → depth_pub → /camera/depth/points → obstacle_watch → /nav/advice
 ↓
 Odometry → mapping_node → /point_cloud → RViz visualization
 
+[Cam intrinsics -> depth : x=(u−cx)⋅z/fx  ,  y=(v−cy)⋅z/fy  ,  z=depth (mm)]
+
+
+![Kinect 3D Point Cloud](images/kinect_viz_1.png)              ![Kinect 3D Point Cloud](images/kinect_viz_2.png)
+![Real-time depth point cloud in RViz](images/rviz_viz_1.png)  ![Realtime depth point cloud in RViz](images/rviz_viz_2.png)
+![Realtime mapping in sim](images/mapping.png)
+
 ## Requirements
 
 - ROS Noetic (Ubuntu 20.04)
