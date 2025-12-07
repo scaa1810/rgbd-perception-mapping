@@ -1,0 +1,13 @@
+<launch>
+  <!-- kinect depth + point cloud -->
+  <node pkg="rgbd_nav_pkg" type="depth_pub.py" name="kinect_depth_pub" output="screen">
+    <!-- eg: offline mode env var if you want -->
+    <!-- <env name="KINECT_OFFLINE" value="1"/> -->
+  </node>
+
+  <!-- obstacle monitor -->
+  <node pkg="rgbd_nav_pkg" type="watch_obstacle.py" name="watch_obstacle" output="screen" />
+
+  <!-- odometry based mapping -->
+  <node pkg="rgbd_nav_pkg" type="mapping.py" name="mapping" output="screen" />
+</launch>
