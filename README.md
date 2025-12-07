@@ -46,7 +46,7 @@ Odometry → mapping_node → /point_cloud → RViz visualization
 
 
 ![Kinect 3D Point Cloud](images/kinect_matpy_viz.png)
-![Real-time depth point cloud in RViz](images/rviz_viz_1.png)  ![Realtime depth point cloud in RViz](images/rviz_viz_2.png)
+![Real-time depth point cloud in RViz](images/rviz.png)
 ![Realtime mapping in sim](images/mapping.png)
 
 ## Requirements
